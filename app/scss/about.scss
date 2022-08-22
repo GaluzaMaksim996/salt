@@ -1,0 +1,60 @@
+@import "variables";
+@import "font-face";
+
+.about {
+  background-color: $bg-about;
+  padding: 120px 0;
+
+  &-title {
+    font-family: "ProximaNova Bold";
+    font-size: 60px;
+    line-height: 72px;
+    text-align: right;
+    color: $secondary;
+    padding: 40px 65px 0 0;
+    margin-bottom: 68px;
+    margin-right: 110px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 46px;
+      height: 46px;
+      top: 0;
+      right: 0;
+      background-image: url(../images/about/union.png);
+    }
+  }
+
+  &-list {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+  }
+
+  &-list + &-list {
+    margin-top: 70px;
+  }
+
+  &-item {
+    &-title {
+      font-family: "ProximaNova Bold";
+      font-size: 18px;
+      line-height: 20px;
+      color: $secondary;
+      margin: 25px 0 8px;
+      text-transform: uppercase;
+      max-width: 280px;
+    }
+
+    &-text {
+      max-width: 281px;
+    }
+  }
+
+  &-authentication {
+    margin-top: 18px;
+  }
+}
