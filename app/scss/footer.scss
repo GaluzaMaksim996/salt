@@ -1,0 +1,107 @@
+@import "font-face";
+@import "variables";
+
+.footer {
+  margin-top: 100px;
+  padding-top: 55px;
+  background-color: $bg-footer;
+
+  &-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-title {
+    font-family: "ProximaNova Bold";
+    display: flex;
+    align-items: center;
+    color: $bg-btn;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &-twitter {
+    background-color: $white;
+
+    &-header {
+      display: flex;
+      background-color: $secondary;
+    }
+
+    &-contact {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 16px;
+    }
+
+    &-link {
+      font-size: 22px;
+    }
+
+    &-text {
+      font-size: 14px;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      padding: 15px 30px;
+
+      &-link {
+        color: $secondary;
+        margin-top: 3px;
+      }
+
+      &-date {
+        margin-top: 6px;
+      }
+    }
+  }
+
+  &-navigation-list,
+  &-links-list,
+  &-contacts-phone {
+    text-transform: uppercase;
+  }
+
+  &-navigation-item + &-navigation-item,
+  &-links-item + &-links-item {
+    margin-top: 8px;
+  }
+
+  &-contacts {
+    display: flex;
+    flex-direction: column;
+
+    &-img {
+      margin-right: 8px;
+    }
+
+    &-email {
+      margin-top: 8px;
+      text-transform: uppercase;
+    }
+  }
+
+  &-logo {
+    max-width: 75px;
+    max-height: 86px;
+
+    &-wrapper {
+      text-align: right;
+      margin: -54px 32px 32px 0;
+    }
+  }
+
+  &-copyright {
+    background-color: $bg-copyright;
+    padding: 5px 0;
+    text-align: center;
+  }
+
+  &-copyright-img {
+    width: 9px;
+    height: 10px;
+  }
+}
