@@ -1,0 +1,50 @@
+@import "font-face";
+@import "variables";
+
+.product {
+  padding: 115px 0 100px 0;
+
+  &-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-content {
+    &-title {
+      color: $secondary;
+    }
+
+    &-text {
+      max-width: 465px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &-popup {
+    background-image: url(../images/bg-popup.png);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    width: 724px;
+    height: 444px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+
+    &-img {
+      margin: 180px 0 20px;
+    }
+
+    &-text {
+      font-family: "Raleway SemiBold";
+    }
+
+    &-token {
+      font-family: "Raleway ExtraBold";
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+}
