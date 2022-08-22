@@ -1,0 +1,93 @@
+@import "variables";
+
+.header {
+  background-image: url(../images/bg-header.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  color: $white;
+  height: 100vh;
+
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 32px;
+  }
+
+  &-slider {
+    margin-top: 130px;
+
+    &-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-descr {
+      margin-left: 85px;
+    }
+
+    &-text {
+      max-width: 450px;
+      font-size: 16px;
+      margin-bottom: 45px;
+    }
+
+    &-btn {
+      padding: 20px 40px;
+    }
+
+    &-img {
+      margin-right: 130px;
+      max-width: 150px;
+      max-height: 125px;
+    }
+  }
+
+  &-more {
+    margin-top: 200px;
+    text-align: center;
+  }
+}
+
+.menu {
+  color: $white;
+
+  &-list {
+    display: flex;
+    gap: 30px;
+  }
+}
+
+.swiper {
+  width: 1245px;
+  height: 250px;
+}
+
+.swiper-pagination-bullet {
+  background: url(../images/polygon.svg);
+  width: 19px;
+  height: 22px;
+  border-radius: 0;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: url(../images/polygon-active.svg);
+  width: 19px;
+  height: 22px;
+  border: none;
+  opacity: none;
+}
+
+.swiper-pagination {
+  display: flex;
+  flex-direction: column;
+}
+
+.swiper-pagination-vertical.swiper-pagination-bullets,
+.swiper-vertical > .swiper-pagination-bullets {
+  right: 4%;
+  top: 40%;
+}
