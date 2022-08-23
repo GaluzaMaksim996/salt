@@ -63,17 +63,18 @@ form.addEventListener('submit', function (event) {
 })
 
 //popup
-
 const openPopup = document.querySelector('.product-popup-link')
 const closePopup = document.querySelector('.popup-close')
 
 openPopup.addEventListener('click', togglePopup)
 closePopup.addEventListener('click', togglePopup)
 
-
-
 function togglePopup() {
   const popup = document.querySelector('.popup')
 
+  const video = document.querySelector('.popup-video')
+
   popup.classList.toggle('popup-active')
+  video.pause()
+  video.currentTime()
 }
