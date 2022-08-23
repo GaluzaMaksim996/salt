@@ -321,26 +321,27 @@
               Contact us
             </h3>
 
-            <form class="contacts-form">
+            <form class="contacts-form" name="form">
               <div class="contacts-form-inputs">
                 <div class="contacts-form-input-wrapper">
                   <label for="firstName">First Name</label>
-                  <input class="contacts-form-input" name="firstName" type="text" placeholder="First Name" />
+                  <input class="contacts-form-input field" name="firstName" type="text" placeholder="First Name" />
                 </div>
 
                 <div class="contacts-form-input-wrapper">
-                  <label for="lasttName">Last Name</label>
-                  <input class="contacts-form-input" name="lasttName" type="text" placeholder="First Name" />
+                  <label for="lastName">Last Name</label>
+                  <input class="contacts-form-input field" name="lastName" type="text" placeholder="First Name" />
                 </div>
               </div>
 
               <label for="email">Email Address</label>
-              <input class="contacts-form-email" name="email" type="text" placeholder="Email Address" />
+              <input class="contacts-form-email field" name="email" type="text" placeholder="Email Address" />
 
               <label for="message">* Your message</label>
-              <textarea class="contacts-form-area" name="message" cols="30" rows="10" placeholder="Textarea"></textarea>
+              <textarea class="contacts-form-area field" name="message" cols="30" rows="10"
+                placeholder="Textarea"></textarea>
 
-              <button class="contacts-form-btn btn">
+              <button class="contacts-form-btn btn" type="submit">
                 SEND
               </button>
             </form>

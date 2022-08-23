@@ -37,3 +37,27 @@ for (let smoothLink of smoothLinks) {
     });
   });
 };
+
+//validation
+const form = document.querySelector('.contacts-form')
+const fields = form.querySelectorAll('.field')
+
+form.addEventListener('submit', function (event) {
+  event.preventDefault()
+
+  const errors = form.querySelectorAll('.error')
+
+  for (var i = 0; i < errors.length; i++) {
+    errors[i].remove()
+  }
+
+  for (var i = 0; i < fields.length; i++) {
+    if (!fields[i].value) {
+      const error = document.createElement('div')
+      error.className = 'error'
+      error.style.color = 'red'
+      error.innerHTML = 'Cannot be blank'
+      form[i].parentElement.insertBefore(error, fields[i])
+    }
+  }
+})
