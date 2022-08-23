@@ -48,6 +48,53 @@
   &-more {
     margin-top: 200px;
     text-align: center;
+
+    &-text {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    &-slider {
+      margin-top: 70px;
+    }
+
+    &-more {
+      margin-top: 100px;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &-top-logo {
+      width: 39px;
+      height: 50px;
+    }
+    &-slider {
+      margin-top: 55px;
+
+      &-content {
+        flex-direction: column-reverse;
+      }
+
+      &-title {
+        max-width: 215px;
+      }
+
+      &-text {
+        margin-bottom: 28px;
+      }
+
+      &-img {
+        margin-right: 0;
+        max-width: 100px;
+        max-height: 83px;
+        margin-bottom: 65px;
+      }
+    }
+
+    &-more {
+      margin-top: 65px;
+    }
   }
 }
 
@@ -58,11 +105,53 @@
     display: flex;
     gap: 30px;
   }
+
+  &-btn {
+    background: transparent;
+    border: none;
+    display: none;
+  }
+
+  @media screen and (max-width: $mobile) {
+    &-list {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      display: block;
+      text-align: center;
+      background-color: #000;
+      transform: translateY(-200%);
+      transition: all 0.4s;
+    }
+
+    &-btn {
+      display: block;
+      margin-left: auto;
+    }
+  }
 }
 
 .swiper {
-  width: 1245px;
-  height: 250px;
+  max-width: 1245px;
+  max-height: 250px;
+
+  @media screen and (max-width: $mobile) {
+    & {
+      max-height: 425px;
+    }
+  }
+}
+
+.swiper-pagination {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: $mobile) {
+    & {
+      display: none;
+    }
+  }
 }
 
 .swiper-pagination-bullet {
@@ -79,11 +168,6 @@
   height: 22px;
   border: none;
   opacity: none;
-}
-
-.swiper-pagination {
-  display: flex;
-  flex-direction: column;
 }
 
 .swiper-pagination-vertical.swiper-pagination-bullets,

@@ -9,6 +9,7 @@
   &-inner {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &-title {
@@ -59,13 +60,19 @@
     }
   }
 
-  &-navigation-list,
+  &-links-wrapper {
+    display: flex;
+  }
+
   &-links-list,
-  &-contacts-phone {
+  &-contacts {
     text-transform: uppercase;
   }
 
-  &-navigation-item + &-navigation-item,
+  &-navigation {
+    margin-right: 150px;
+  }
+
   &-links-item + &-links-item {
     margin-top: 8px;
   }
@@ -80,7 +87,6 @@
 
     &-email {
       margin-top: 8px;
-      text-transform: uppercase;
     }
   }
 
@@ -98,10 +104,73 @@
     background-color: $bg-copyright;
     padding: 5px 0;
     text-align: center;
+
+    &-text {
+      font-family: "Raleway Medium";
+      font-size: 10px;
+    }
+
+    &-img {
+      width: 9px;
+      height: 10px;
+    }
   }
 
-  &-copyright-img {
-    width: 9px;
-    height: 10px;
+  @media screen and (max-width: 1120px) {
+    &-navigation {
+      margin-right: 50px;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    &-inner {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-links-wrapper {
+      margin-top: 60px;
+    }
+
+    &-contacts {
+      margin-top: 50px;
+
+      &-title {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &-links-list,
+    &-contacts {
+      font-size: 14px;
+    }
+
+    &-logo {
+      max-width: 88px;
+      max-height: 100px;
+
+      &-wrapper {
+        text-align: center;
+        margin: 80px auto;
+      }
+    }
+
+    &-copyright {
+      padding: 38px 0;
+      text-align: center;
+
+      &-text {
+        font-size: 8px;
+      }
+
+      &-img {
+        width: 6px;
+        height: 6px;
+      }
+    }
   }
 }

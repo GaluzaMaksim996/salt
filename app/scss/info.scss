@@ -35,4 +35,39 @@
       text-align: center;
     }
   }
+
+  @media screen and (max-width: $tablet) {
+    &-item + &-item {
+      margin-left: 50px;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    & {
+      margin: 80px 0 100px;
+
+      &-list {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &-item + &-item {
+        margin-left: 0;
+        margin-top: 68px;
+      }
+
+      &-item {
+        &-number {
+          font-size: 42px;
+          line-height: 50px;
+        }
+
+        &-text {
+          font-size: 13px;
+          line-height: 16px;
+        }
+      }
+    }
+  }
 }
