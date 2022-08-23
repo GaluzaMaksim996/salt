@@ -61,3 +61,19 @@ form.addEventListener('submit', function (event) {
     }
   }
 })
+
+//popup
+
+const openPopup = document.querySelector('.product-popup-link')
+const closePopup = document.querySelector('.popup-close')
+
+openPopup.addEventListener('click', togglePopup)
+closePopup.addEventListener('click', togglePopup)
+
+
+
+function togglePopup() {
+  const popup = document.querySelector('.popup')
+
+  popup.classList.toggle('popup-active')
+}

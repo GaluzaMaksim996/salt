@@ -114,3 +114,39 @@
     }
   }
 }
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.95);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+
+  &-video {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    outline: none;
+  }
+
+  &-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    max-width: 32px;
+  }
+}
+
+.popup-active {
+  visibility: visible;
+  opacity: 1;
+}
