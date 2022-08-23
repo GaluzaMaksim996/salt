@@ -16,7 +16,7 @@
     font-family: "ProximaNova Bold";
     display: flex;
     align-items: center;
-    color: $bg-btn;
+    color: $orange;
     text-transform: uppercase;
     margin-bottom: 20px;
   }
@@ -75,6 +75,12 @@
 
   &-links-item + &-links-item {
     margin-top: 8px;
+  }
+
+  &-links-item-link:hover,
+  &-contacts-phone:hover,
+  &-contacts-email:hover {
+    color: $orange;
   }
 
   &-contacts {

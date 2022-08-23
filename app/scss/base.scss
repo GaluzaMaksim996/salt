@@ -64,7 +64,13 @@ h6 {
 
 .btn {
   padding: 18px 82px;
-  background: $bg-btn;
+  background: $orange;
   border: none;
   border-radius: 4px;
+  transition: all 0.3s;
+
+  &:hover {
+    background: $primary;
+    color: $white;
+  }
 }

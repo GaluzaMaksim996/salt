@@ -52,6 +52,14 @@
     &-text {
       margin-bottom: 20px;
     }
+
+    &-link {
+      &:hover {
+        path {
+          fill: $white;
+        }
+      }
+    }
   }
 
   @media screen and (max-width: $tablet) {
@@ -104,6 +112,16 @@
   &-list {
     display: flex;
     gap: 30px;
+  }
+
+  &-item {
+    padding: 0 4px 4px 4px;
+    transition: all 0.2s;
+
+    &--active,
+    &:hover {
+      border-bottom: 3px solid $orange;
+    }
   }
 
   &-btn {
