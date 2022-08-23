@@ -6,6 +6,12 @@ let uglify = require('gulp-uglify-es').default
 const autoprefixer = require('gulp-autoprefixer')
 const imagemin = require('gulp-imagemin')
 const del = require('del')
+const ghPages = require('gulp-gh-pages')
+
+function deploy() {
+  return src('dist/**/*')
+    .pipe(ghPages())
+}
 
 function cleanDist() {
   return del('dist')
@@ -24,7 +30,7 @@ function images() {
         ]
       })
     ]))
-    .pipe(dist('dist/images'))
+    .pipe(dest('dist/images'))
 }
 
 function scripts() {
@@ -79,6 +85,7 @@ exports.browsersync = browsersync
 exports.scripts = scripts
 exports.images = images
 exports.cleanDist = cleanDist
+exports.deploy = deploy
 
 exports.build = series(cleanDist, images, build)
 exports.default = parallel(styles, scripts, browsersync, watching)
