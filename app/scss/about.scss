@@ -32,6 +32,7 @@
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     gap: 100px;
+    margin-right: 80px;
   }
 
   &-item {
@@ -43,12 +44,16 @@
       margin-top: 28px;
       margin-bottom: 8px;
       text-transform: uppercase;
-      max-width: 280px;
+      max-width: 285px;
       cursor: pointer;
     }
 
     &-text {
-      max-width: 281px;
+      max-width: 285px;
+    }
+
+    &-img {
+      max-height: 110px;
     }
   }
 
@@ -60,6 +65,7 @@
     &-list {
       grid-template-columns: repeat(2, 1fr);
       gap: 50px;
+      margin: 0 60px;
     }
   }
 
@@ -82,6 +88,7 @@
       &-list {
         grid-template-columns: repeat(1, 1fr);
         gap: 60px;
+        margin: 0;
       }
 
       &-item {
@@ -91,7 +98,12 @@
         align-items: center;
 
         &-img {
-          width: 55%;
+          max-height: 130px;
+        }
+
+        &-title {
+          margin-right: auto;
+          margin-bottom: 16px;
         }
       }
     }
